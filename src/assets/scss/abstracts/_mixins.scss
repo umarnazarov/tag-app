@@ -1,0 +1,40 @@
+@use 'breakpoints';
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoints-down, $size)) {
+        @content
+    }
+}
+
+;
+
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content
+    }
+}
+
+;
+
+@mixin center-child-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+;
+
+@mixin font-face($font-family, $font-path, $font-file, $font-weight: normal, $font-style: normal) {
+    @font-face {
+        font-family: $font-family;
+        src: url($font-path + $font-file + '.eot' );
+        src: url($font-path + $font-file + '.eot?#iefix') format('embedded-opentype'),
+        url($font-path + $font-file + '.woff') format('woff'),
+        url($font-path + $font-file + '.ttf') format('truetype'),
+        url($font-path + $font-file + '.svg#{$font-family}') format('svg');
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+}
+
+;
