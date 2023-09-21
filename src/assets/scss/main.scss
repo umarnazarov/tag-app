@@ -4,12 +4,6 @@
 $font-path: '../fonts/' !default;
 
 * {
-    @each $color, $types in $colors {
-        @each $shade, $value in $types {
-            --clr-#{$color}-#{$shade}: #{$value};
-        }
-    }
-
     @each $font-types, $font-variants in $font-faces {
         @each $variant in $font-variants {
             $font-path: $font-path !global;

@@ -1,0 +1,27 @@
+@import '../../assets/scss/abstracts/colors';
+@import '../../assets/scss/abstracts/constants';
+
+.modal-content__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $size-tiny;
+    padding: $size-medium-lg $size-lg-xl;
+
+    .tag-box {
+        cursor: pointer;
+    }
+
+    &--selected {
+        border-top: $size-tiny-xxl solid $color-secondary-lighter;
+    }
+
+    &__text {
+        font-size: $size-small;
+        line-height: $size-base;
+        font-weight: $font-weight-base;
+    }
+
+    &__icon {
+        margin-left: $size-tiny;
+    }
+}
