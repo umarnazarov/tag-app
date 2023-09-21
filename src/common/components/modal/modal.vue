@@ -22,23 +22,25 @@ const hideDialog = () => {
 </script>
 
 <style scoped lang="scss">
-@use "../../../assets/scss/abstracts/mixins" as *;
+@import "../../../assets/scss/abstracts/mixins";
+@import '../../../assets/scss/abstracts/colors';
+@import '../../../assets/scss/abstracts/constants';
+
+$full-percent: 100%;
 
 .modal-container {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--clr-secondary-600);
+    height: $full-percent;
+    width: $full-percent;
+    background-color: $color-secondary-light;
     @include center-child-div();
 
     &__content {
-        width: 540px;
-        background-color: var(--clr-secondary-100);
-        border: 1px solid var(--clr-primary-400);
-        padding: 40px;
-        border-radius: 8px;
+        width: $width-base;
+        background-color: $color-white;
+        border-radius: $size-tiny;
     }
 
 }
